@@ -2,7 +2,7 @@ import requests
 from itertools import cycle
 
 #download fresh proxies
-requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all")
+x = requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all")
 px = open("proxies.txt", "w")
 px.write(str(x.text)) 
 px.close()
